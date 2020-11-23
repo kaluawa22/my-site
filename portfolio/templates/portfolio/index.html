@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+<!--    <link href="{% static 'portfolio/styles.css' %}" type="text/css" rel="stylesheet">-->
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+
+</head>
+<body>
+  <div class="navigation">
+    <nav>
+      <!-- <li id="home-nav" class="{% if classhome %}{{classhome}}{% else %}main-nav{% endif %}"><a href="{% url 'index' %}">HOME</a></li> -->
+      <li class="{% if classgithub %}{{classgithub}}{% else %}main-nav{% endif %}" id="github-nav"><a href="http://www.github.com/kaluawa22" target="_blank">GITHUB</a></li>
+      <li class="{% if classresume %}{{classresume}}{% else %}main-nav{% endif %}" id="resume-nav"><a href="{% static 'portfolio/pdf/KACV2020.pdf' %}" target="_blank" >RESUME</a></li>
+
+    </nav>
+  </div>
+<section class = "tech-skills">
+  {% load static %}
+  <h1>Technologies</h1>
+  <div class="Technologies">
+    <img src="{% static 'portfolio/images/html5-logo.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/css3-logo.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/js-logo.svg' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/mongodb.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/python-logo.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/node-js-logo.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/django.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/c-plus.png' %}" class="tech-icons">
+    <img src="{% static 'portfolio/images/sql.png' %}" class="tech-icons">
+  </div>
+</section>
+<section class = "contact-me">
+  <h2>Contact Me</h2>
+  <div class="social-media">
+
+</section>
+
+  <!-- <ul>
+      <li><a href="{% url 'index' %}">HOME</a></li>
+      <li><a href="{% url 'resume' %}">RESUME</a></li>
+      <li><a href="{% url 'contact'%}">CONTACT</a></li>
+  </ul> -->
+
+</body>
+<footer id="copy">Kalu Awa &copy; 2020</footer>
+</html>
