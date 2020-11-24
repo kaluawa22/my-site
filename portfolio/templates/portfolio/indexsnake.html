@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Snake</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/snake_game_styles.css' %}" />
+
+  </head>
+  <body>
+    <div id="gameContainer"></div>
+
+    <div id="scoreContainer">
+      <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
+      <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+    </div>
+
+
+    <div id="onScreenControllers">
+      <button id="leftButton">◀️</button>
+      <div>
+        <button id="upButton">🔼</button>
+        <button id="downBUtton">🔽</button>
+      </div>
+      <button id="rightButton">▶️</button>
+    </div>
+
+  </body>
+ <script type="text/javascript" src="{% static 'portfolio/snake_game.js' %}"></script>
+
+</html>

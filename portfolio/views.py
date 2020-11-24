@@ -15,8 +15,10 @@ def contact(request):
     return render(request, 'portfolio/contact.html', context)
 
 
+def projects(request):
+    context = {'classhome': "nav-current"}
+    return render(request, 'portfolio/projects.html', context)
 
-
-# def projects(request):
-#     context = {'classhome': "nav-current"}
-#     return render(request, 'portfolio/projects.html', context)
+def snakeGame(request):
+    context = {'classSnakeGame': "snake-current"}
+    return render(request, 'portfolio/indexsnake.html', context)

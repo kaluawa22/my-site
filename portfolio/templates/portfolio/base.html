@@ -1,10 +1,34 @@
-<!DOCTYPE html>
+{% load static %}
+
+
+
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+<!--    <link href="{% static 'portfolio/styles.css' %}" type="text/css" rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
+
 </head>
 <body>
+  <div class="navigation">
+    <nav>
+      <li id="home-nav" class="{% if classhome %}{{classhome}}{% else %}main-nav{% endif %}"><a href="{% url 'index' %}">HOME</a></li>
+      <li class="{% if classgithub %}{{classgithub}}{% else %}main-nav{% endif %}" id="github-nav"><a href="http://www.github.com/kaluawa22" target="_blank">GITHUB</a></li>
+      <li class="{% if classresume %}{{classresume}}{% else %}main-nav{% endif %}" id="resume-nav"><a href="{% static 'portfolio/pdf/KACV2020.pdf' %}" target="_blank" >RESUME</a></li>
+        <li class="{% if classprojects %}{{classprojects}}{% else %}main-nav{% endif %}" id="project-nav"><a href="{% url 'projects' %}">PROJECTS</a></li>
+      <li class="{% if classcontact %}{{classcontact}}{% else %}main-nav{% endif %}" id="contact-nav"><a href="http://www.linkedin.com/in/kalu-awa-3a0b34125" target="_blank">CONTACT ME</a></li>
+
+    </nav>
+  </div>
+  {% block content %}
+  {% endblock %}
 
 </body>
+<footer id="copy">Kalu Awa &copy; 2020</footer>
 </html>

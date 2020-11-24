@@ -1,0 +1,18 @@
+<!DOCTYPE>
+{% extends 'portfolio/base.html' %}
+
+{% block name %}Home{% endblock %}
+
+{% block content %}
+
+
+<h1>Projects</h1>
+
+<section class "snakeGameContainer">
+  <h2>Snake</h2>
+  <div class = "snakeGame">
+    {% load static %}
+    <a href="{% url 'indexsnake' %}"</a>
+      <img src="{% static 'portfolio/images/snake-logo.png' %}" class="snake-icons">
+  </div>
+{% endblock %}
