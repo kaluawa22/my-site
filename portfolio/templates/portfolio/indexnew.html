@@ -1,14 +1,80 @@
-
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% extends 'portfolio/base.html' %}
+  {% load static %}
+  <script src= "http://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js."></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
-{% block name %}Home{% endblock %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-{% block content %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
 
-{% load static %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .container-fluid {
+        padding-left: 20px;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #000000;
+
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    .img-fluid {
+        max-width: 150px;
+        height: 150px;
+    }
+    .row{
+        padding-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <!-- <a class="navbar-brand" href="#">Portfolio</a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">HOME</a></li>
+        <li class="{% if classgithub %}{{classgithub}}{% else %}main-nav{% endif %}" id="github-nav"><a href="http://www.github.com/kaluawa22" target="_blank">GITHUB</a></li>
+
+        <li class="{% if classprojects %}{{classprojects}}{% else %}main-nav{% endif %}" id="project-nav"><a href="{% url 'projects' %}">PROJECTS</a></li>
+
+        <li class="{% if classresume %}{{classresume}}{% else %}main-nav{% endif %}" id="resume-nav"><a href="{% static 'portfolio/pdf/KACV2020.pdf' %}" target="_blank" >RESUME</a></li>
+
+        <li class="{% if classcontact %}{{classcontact}}{% else %}main-nav{% endif %}" id="contact-nav"><a href="http://www.linkedin.com/in/kalu-awa-3a0b34125" target="_blank">CONTACT ME</a></li>
+
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul> -->
+    </div>
+  </div>
+</nav>
+
 {% load static %}
 <section class = 'tech-skills'>
     
@@ -108,10 +174,12 @@
     </div>
   </div>
 </div> -->
-<!-- <br><br> -->
+<br><br>
 
 <!-- <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer> -->
 
-{% endblock %}
+</body>
+</html>
+

@@ -5,14 +5,129 @@
 
 {% block content %}
 
+<!-- <section class= "project-header">
+  <h1>Projects</h1>
+</section> -->
 
-<h1>Projects</h1>
-
-<section class "snakeGameContainer">
+<!-- <section class = "snakeGameContainer">
   <h3>Snake</h3>
   <div class = "snakeGame">
     {% load static %}
     <a href="{% url 'indexsnake' %}"</a>
-      <img src="{% static 'portfolio/images/snake-logo.png' %}" class="snake-icons">
+      <img src="{% static 'portfolio/images/snake-logo.png' %}"  class="snake-icons">
+      
   </div>
+</section> -->
+<!-- <img src="{% static 'portfolio/images/snake-logo.png' %}"  class="snake-icons"> -->
+<!-- <style media="screen">
+  [class*="col"]{
+    padding: 1rem;
+    background-color: #33b5e5;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+  }
+
+</style> -->
+
+<section class = "page-content">
+  <section class = "project-container">
+    
+    <!-- <div class="container-md">
+      <div class="row">
+        <div class ="col-sm">
+          <div class = "snakeGame">
+            {% load static %}
+            SNAKEGAME
+            <a href="{% url 'indexsnake' %}"</a>
+
+          </div>
+        </div>
+        <div class ="col-sm">
+          <div class = "snakeGame">
+            {% load static %}
+            SNAKEGAME
+            <a href="{% url 'indexsnake' %}"</a>
+
+          </div>
+        </div>
+        <div class ="col-sm">
+          <div class = "snakeGame">
+            {% load static %}
+            SNAKEGAME
+            <a href="{% url 'indexsnake' %}"</a>
+              
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </section>
+
+
+  <section class = "project-cards">
+    <h1>Projects</h1>
+    <div class="card-group">
+      <div class="card">
+        <a href="{% url 'indexsnake' %}"</a>
+        <img class="card-img-top" src="{% static 'portfolio/images/snake-logo.png' %}"  class="img-fluid"> 
+        <div class="card-block">
+          <h4 class="card-title">Snake Game</h4>
+          <p class="card-text">Simple Snake Game written in Javascript.</p>
+          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        </div>
+      </div>
+      <!-- <div class="card">
+        <img class="card-img-top" src="{% static 'portfolio/images/snake-logo.png' %}"  class="img-fluid">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="{% static 'portfolio/images/snake-logo.png' %}"  class="img-fluid">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div> 
+      </div> -->
+    </div>
+    <!-- <div class="card mb-3">
+      <img
+        src="{% static 'portfolio/images/snake-logo.png' %}"
+        class="img-fluid"
+        alt="Responsive image"
+         
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a snake game
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+      </div>
+    </div> -->
+    <!-- <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in to additional
+          content. This content is a little bit longer.
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </p>
+      </div>
+      <img
+        src="https://mdbootstrap.com/img/new/slides/042.jpg"
+        class="card-img-bottom"
+        alt="..."
+      />
+    </div> -->
+  </section>
+</section>
 {% endblock %}

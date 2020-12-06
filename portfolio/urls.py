@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^resume/$', views.resume, name='resume'),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^indexsnake/$', views.snakeGame, name='indexsnake'),
+    url(r'^indexnew/$', views.newHome, name='indexnew'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

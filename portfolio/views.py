@@ -22,3 +22,7 @@ def projects(request):
 def snakeGame(request):
     context = {'classSnakeGame': "snake-current"}
     return render(request, 'portfolio/indexsnake.html', context)
+
+def newHome(request):
+    context = {'classNewHome': "newHome-current"}
+    return render(request, 'portfolio/indexnew.html', context)
