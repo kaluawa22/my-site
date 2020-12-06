@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^indexsnake/$', views.snakeGame, name='indexsnake'),
     url(r'^indexnew/$', views.newHome, name='indexnew'),
+    url(r'^passwordgen/$', views.passWordGen, name='passwordgen'),
+    url(r'^currencyconverter/$', views.currecyConverter, name='currencyconverter'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -26,3 +26,10 @@ def snakeGame(request):
 def newHome(request):
     context = {'classNewHome': "newHome-current"}
     return render(request, 'portfolio/indexnew.html', context)
+
+def passWordGen(request):
+    context = {'classPasswordGen': "passWordGen-current"}
+    return render(request, 'portfolio/passwordgen.html', context)
+def currecyConverter(request):
+    context = {'classCurrencyConverter': "currencyConverter-current"}
+    return render(request, 'portfolio/currencyconverter.html', context)

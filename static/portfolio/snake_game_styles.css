@@ -1,5 +1,5 @@
 body {
-  background-color: darkslategrey;
+  background-color: rgba(85, 85, 85, 0.993);
   text-align: center;
 }
 
@@ -110,3 +110,4 @@ body {
   width: 20vw;
   font-size: 10vw;
   border: none;
+}
