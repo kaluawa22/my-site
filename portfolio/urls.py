@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index, name='index2021'),
     url(r'^projects/$', views.projects, name='projects'),
     url(r'^resume/$', views.resume, name='resume'),
     url(r'^contact/$', views.contact, name='contact'),

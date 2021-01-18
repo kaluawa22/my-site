@@ -3,9 +3,13 @@ from django.shortcuts import render
 
 # Create your views here.
 
+# def index(request):
+#     context = {'classhome': "nav-current"}
+#     return render(request, 'portfolio/index.html', context)
+
 def index(request):
     context = {'classhome': "nav-current"}
-    return render(request, 'portfolio/index.html', context)
+    return render(request, 'portfolio/index2021.html', context)
 
 def resume(request):
     context = {'classhome': "nav-current"}
