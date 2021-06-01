@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^indexnew/$', views.newHome, name='indexnew'),
     url(r'^passwordgen/$', views.passWordGen, name='passwordgen'),
     url(r'^currencyconverter/$', views.currecyConverter, name='currencyconverter'),
+    url(r'^wcgame/$', views.wcGame, name='wcGame'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

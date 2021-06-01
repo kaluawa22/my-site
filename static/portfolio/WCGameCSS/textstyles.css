@@ -1,0 +1,85 @@
+body {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  background: #000;
+}
+#characters{
+  font-size: 15px;
+}
+h1 {font-size: 30px;}
+h2 {font-size: 24px; margin-bottom: 10px;}
+#container {
+  background: #a7cfdf;
+  background: -moz-linear-gradient(top,  #a7cfdf 0%, #23538a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7cfdf), color-stop(100%,#23538a));
+  background: -webkit-linear-gradient(top,  #a7cfdf 0%,#23538a 100%);
+  background: -o-linear-gradient(top,  #a7cfdf 0%,#23538a 100%);
+  background: -ms-linear-gradient(top,  #a7cfdf 0%,#23538a 100%);
+  background: linear-gradient(top,  #a7cfdf 0%,#23538a 100%);
+  outline: 0;
+}
+#intro h1 span {
+  text-indent: -300px;
+  background: url(../images/car.png) no-repeat center 20px;
+  height: 100px;
+  display: block;
+}
+#gameover h1{
+  background: url(../img/brokenshield.png) no-repeat center 20px;
+  padding-top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#intro ul, #intro p, #gameover p {
+  width: 80%;
+  margin: 10px auto;
+}
+#intro p {
+  font-size: 16px;
+  margin: 20px auto;
+  text-align: center;
+}
+#intro h1 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+#intro button, #gameover button, #characters button {
+  display: block;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 30px;
+  border: none;
+  background: rgb(37,91,255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(37,91,255,1) 0%, rgba(20,76,244,1) 55%, rgba(19,68,213,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(37,91,255,1) 0%,rgba(20,76,244,1) 55%,rgba(19,68,213,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(37,91,255,1) 0%,rgba(20,76,244,1) 55%,rgba(19,68,213,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#255bff', endColorstr='#1344d5',GradientType=0 ); /* IE6-9 */
+copy
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+#intro button:hover, #intro button:focus, #gameover button:hover, #gameover button:focus {
+  box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.7);
+}
+#player {
+  display: block;
+  margin: 1px auto;
+}
+.right, .left {
+  z-index: 10;
+  line-height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+
+  background: rgb(37,91,255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(37,91,255,1) 0%, rgba(20,76,244,1) 55%, rgba(19,68,213,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(37,91,255,1) 0%,rgba(20,76,244,1) 55%,rgba(19,68,213,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(37,91,255,1) 0%,rgba(20,76,244,1) 55%,rgba(19,68,213,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#255bff', endColorstr='#1344d5',GradientType=0 ); /* IE6-9 */
+copy
+}

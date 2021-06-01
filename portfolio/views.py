@@ -37,3 +37,7 @@ def passWordGen(request):
 def currecyConverter(request):
     context = {'classCurrencyConverter': "currencyConverter-current"}
     return render(request, 'portfolio/currencyconverter.html', context)
+
+def wcGame(request):
+    context = {'classwcGame': "wcGame-current"}
+    return render(request, 'portfolio/WCGameIndex.html', context)
