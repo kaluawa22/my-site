@@ -19,15 +19,15 @@ li {
   overflow: hidden;
 }
 
-.playing #container {
+/* .playing #container {
   cursor: none;
-}
+} */
 
 @media screen and (min-device-width: 700px) {
   #container {
     width: 40%;
     min-width: 360px;
-    height: 70%;
+    height: 50%;
     margin: 0 auto;
   }
 }
