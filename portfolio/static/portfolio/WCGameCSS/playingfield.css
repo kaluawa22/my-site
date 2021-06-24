@@ -26,8 +26,8 @@ li {
 @media screen and (min-device-width: 700px) {
   #container {
     width: 40%;
-    min-width: 500px;
-    height: 90%;
+    min-width: 360px;
+    height: 70%;
     margin: 0 auto;
   }
 }
