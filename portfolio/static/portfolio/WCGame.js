@@ -86,7 +86,7 @@
     window.addEventListener( 'deviceorientation', tilt, false );
 
     // new Event handlers TEST
-    container.addEventListener('touchmove', onplayermove, false);
+    container.addEventListener('touchmove', handleTouchEvent, false);
     container.addEventListener( 'touchstart', ontouchstart, false );
     container.addEventListener( 'touchend', ontouchend, false );
     container.addEventListener( 'mousemove', onmousemove, false );
@@ -113,12 +113,24 @@
 
   };
   // New touch controls
-  function onplayermove ( ev ) {
-    var mx = ev.clientX - container.offsetLeft;
+  // function onplayermove ( ev ) {
+  //   var mx = ev.clientX - container.offsetLeft;
+  //   if ( mx < offset ) { mx = offset; }
+  //   if ( mx > width-offset ) { mx = width-offset; }
+  //   x = mx;
+  // }
+
+  function handleTouchEvent(e) {
+    if (e.touches.length === 0 ) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var touch = e.touches[0];
+    var mx = (touch.clientX - container.offsetLeft);
     if ( mx < offset ) { mx = offset; }
     if ( mx > width-offset ) { mx = width-offset; }
     x = mx;
-  }
+}
+
   /* Event Handlers */
 
   /* Click handling */
