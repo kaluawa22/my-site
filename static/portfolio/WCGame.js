@@ -73,7 +73,7 @@
     window.addEventListener( 'deviceorientation', tilt, false );
 
     // new Event handlers TEST
-    container.addEventListener('touchmove', onplayermove, true);
+    container.addEventListener('touchmove', onplayermove, false);
     container.addEventListener( 'touchstart', ontouchstart, false );
     container.addEventListener( 'touchend', ontouchend, false );
     container.addEventListener( 'mousemove', onmousemove, false );
