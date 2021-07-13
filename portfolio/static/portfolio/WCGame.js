@@ -165,12 +165,12 @@
   }
 
   /* Mouse handling */
-  function onmousemove ( ev ) {
-    var mx = ev.clientX - container.offsetLeft;
-    if ( mx < offset ) { mx = offset; }
-    if ( mx > width-offset ) { mx = width-offset; }
-    x = mx;
-  }
+  // function onmousemove ( ev ) {
+  //   var mx = ev.clientX - container.offsetLeft;
+  //   if ( mx < offset ) { mx = offset; }
+  //   if ( mx > width-offset ) { mx = width-offset; }
+  //   x = mx;
+  // }
 
   /*
     Introduction

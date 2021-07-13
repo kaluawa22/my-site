@@ -145,13 +145,19 @@
     if ( x > width-offset ) { x = width-offset; }
   }
 
-  /* Mouse handling */
-  function onmousemove ( ev ) {
+  function onplayermove ( ev ) {
     var mx = ev.clientX - container.offsetLeft;
     if ( mx < offset ) { mx = offset; }
     if ( mx > width-offset ) { mx = width-offset; }
     x = mx;
   }
+  /* Mouse handling */
+  // function onmousemove ( ev ) {
+  //   var mx = ev.clientX - container.offsetLeft;
+  //   if ( mx < offset ) { mx = offset; }
+  //   if ( mx > width-offset ) { mx = width-offset; }
+  //   x = mx;
+  // }
 
   /*
     Introduction
