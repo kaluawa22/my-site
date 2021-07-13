@@ -66,11 +66,17 @@
     /* Assign event handlers */
     container.addEventListener( 'keydown', onkeydown, false );
     container.addEventListener( 'keyup', onkeyup, false );
+    // container.addEventListener( 'touchstart', ontouchstart, false );
+    // container.addEventListener( 'touchend', ontouchend, false );
+    container.addEventListener( 'click', onclick, false );
+    // container.addEventListener( 'mousemove', onmousemove, false );
+    window.addEventListener( 'deviceorientation', tilt, false );
+
+    // new Event handlers TEST
+    container.addEventListener('touchmove', onplayermove, true);
     container.addEventListener( 'touchstart', ontouchstart, false );
     container.addEventListener( 'touchend', ontouchend, false );
-    container.addEventListener( 'click', onclick, false );
     container.addEventListener( 'mousemove', onmousemove, false );
-    window.addEventListener( 'deviceorientation', tilt, false );
 
     /* Get the game score, or preset it when there isn't any  */
     if( localStorage.html5catcher ) {

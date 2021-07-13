@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>WCGame</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/newWCGameStyles.css' %}" />
+  </head>
+  <body>
+    <div id="gameContainer"></div>
+
+    <div id="scoreContainer">
+      <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
+      <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+    </div>
+
+    <div id="onScreenControllers">
+      <button id="leftButton">◀️</button>
+      <div>
+        <button id="upButton">🔼</button>
+        <button id="downButton">🔽</button>
+      </div>
+      <button id="rightButton">▶️</button>
+    </div>
+
+  </body>
+<script type="text/javascript" src="{% static 'portfolio/newWCGame.js' %}"></script>
+</html>

@@ -79,11 +79,17 @@
     /* Assign event handlers */
     container.addEventListener( 'keydown', onkeydown, false );
     container.addEventListener( 'keyup', onkeyup, false );
+    // container.addEventListener( 'touchstart', ontouchstart, false );
+    // container.addEventListener( 'touchend', ontouchend, false );
+    container.addEventListener( 'click', onclick, false );
+    // container.addEventListener( 'mousemove', onmousemove, false );
+    window.addEventListener( 'deviceorientation', tilt, false );
+
+    // new Event handlers TEST
+    container.addEventListener('touchmove', onplayermove, true);
     container.addEventListener( 'touchstart', ontouchstart, false );
     container.addEventListener( 'touchend', ontouchend, false );
-    container.addEventListener( 'click', onclick, false );
     container.addEventListener( 'mousemove', onmousemove, false );
-    window.addEventListener( 'deviceorientation', tilt, false );
 
     /* Get the game score, or preset it when there isn't any  */
     if( localStorage.html5catcher ) {
@@ -106,7 +112,13 @@
     }
 
   };
-
+  // New touch controls
+  function onplayermove ( ev ) {
+    var mx = ev.clientX - container.offsetLeft;
+    if ( mx < offset ) { mx = offset; }
+    if ( mx > width-offset ) { mx = width-offset; }
+    x = mx;
+  }
   /* Event Handlers */
 
   /* Click handling */
@@ -208,6 +220,7 @@
     document.body.className = 'playing';
     width = field.offsetWidth;
     height = field.offsetHeight;
+    width = 32
     canvas.width = width;
     canvas.height = height;
     playerY = height - player.offsetHeight;
