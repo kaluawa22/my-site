@@ -18,8 +18,12 @@
     <div id="container">
 
     <section id ="intro">
-      <h1><span>Woodlands</span>Game</h1>
-      <p> A game all about picking up as many people as you can</p>
+      <div class ="logo">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-logo.png' %}" width="100%" height ="261" id="logo">
+     </div>
+      <!-- <h1><span>Woodlands</span>Game</h1> -->
+      <!-- <p> A game all about picking up as many people as you can</p> -->
+      <p> Merry Christmas!</p>
       <ul>
         <li>Last Score: <output></output></li>
         <li>High Score: <output></output></li>
@@ -32,35 +36,73 @@
     <section id="instructions">
     <ul id="characters" data-countstart="2" data-newsprite="500">
       <li class="introdeck">
-        <h2>You are a man on a mission</h2>
+        <h2>Baby Jesus</h2>
         {% load static %}
-        <img src="{% static 'portfolio/WCGameImages/car.png' %}" width="72" height="100" id="player"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/baby-jesus.png' %}" width="72" height="100" id="player"
              data-increase="5">
-        <p>Your job is to pick up as many people as you can and take them to church without hitting too many obstacles</p>
-        <p>You can use the cursor keys or move the mouse on the playfield <span id="orientation">- or simply tilt your mobile or tablet</span>.</p>
-        <p>The game is over when you are out of energy</p>
+        <p>Your job is to pick up as many Christmas goodies as you can before your Energy runs out!</p>
+        <p>You can use the cursor keys, move the mouse on the playfield, or drag your finger using your device's touchscreen.</p>
+        <!-- <p>You can use the cursor keys or move the mouse on the playfield <span id="orientation">- or simply tilt your mobile or tablet</span>.</p> -->
+        <!-- <p>The game is over when you are out of energy</p> -->
         <p><button class="next">More</button></p>
       </li>
 
       <li class="introdeck">
         <h2>The Objective</h2>
-        <p>Picking up a pereson is worth 10 energy points.</p>
+        <p>Picking up Christmas Presents regenerates 5 Energy points.</p>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/person.png' %}" class="sprite" alt="Video"
-                   data-collision="energy:10" data-type="good"></li>
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
+                   data-collision="energy:5" data-type="good"></li>
           <!-- <li><img src="images/bible.png" class="sprite" alt="Audio"
                    data-collision="energy:20" data-type="good"></li> -->
           <!-- <li><img src="images/person.png" class="sprites" alt="Canvas"
                    data-collision="energy:20" data-type="good"></li> -->
         </ul>
         <h2></h2>
-        <p>Picking up a bible is worth 10 points.</p>
+        <p>Picking up these Items regenerates 10 Energy points. Not catching these items will cost 10 energy points. </p>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/bible.png' %}" class="sprites"
-                   alt="Semantic Markup" data-collision="energy:10"
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/candy-cane-2.png' %}" class="sprite"
+                   alt="Video" data-collision="energy:10"
                    data-type="good"></li>
+         <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-stocking.png' %}" class="sprite"
+                  alt="Video" data-collision="energy:10"
+                  data-type="good"></li>
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-tree.png' %}" class="sprite"
+                    alt="Video" data-collision="energy:10"
+                    data-type="good"></li>
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/santa-claus.png' %}" class="sprite"
+                    alt="Video" data-collision="energy:10"
+                    data-type="good"></li>
+
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/3-wise-men.png' %}" class="sprite"
+                   alt="Video" data-collision="energy:10"
+                   data-type="good"></li>
+            <!--  <li><img src="{% static 'portfolio/WCGameImages/books/numbers.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/dueteronomy.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/2samuel.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/1samuel.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/ruth.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/judges.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/joshua.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li>
+           <li><img src="{% static 'portfolio/WCGameImages/books/1kings.png' %}" class="sprite"
+                     alt="Video" data-collision="energy:10"
+                     data-type="good"></li> -->
           <!-- <li><img src="images/history.png" class="sprites" alt="History"
                    data-collision="energy:10" data-type="good"></li> -->
         </ul>
@@ -78,11 +120,11 @@
                    data-collision="energy:5" data-type="good"></li>
         </ul> -->
         <h2>Warning</h2>
-        <p>You must try to avoid these rocks at all costs. Getting hit by a rock will cost you 25 energy points!</p>
+        <p>You must try to avoid getting hit by a these at all costs. Getting hit by one will cost you 50 energy points!</p>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite" alt="Flash"
-                   data-collision="energy:-25" data-type="bad"></li>
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal.png' %}" class="sprite" alt="Flash"
+                   data-collision="energy:-50" data-type="bad"></li>
           <!-- <li><img src="images/rock.png" class="sprite" alt="jQuery"
                   data-collision="energy:-50" data-type="bad"></li>
           <li><img src="images/rock.png" class="sprite" alt="CSS"
@@ -93,21 +135,21 @@
 
       <li class="introdeck">
         <h2>Warning</h2>
-        <p>These are not as dangerous as the rocks, if you hit these it will cost you 10 energy points!</p>
+        <p>These are not as dangerous as the coal, but if you get hit by these items, it will cost you 10 energy points!</p>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite" alt="WebGL"
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/snow-ball.png' %}" class="sprite" alt="WebGL"
                    data-collision="energy:-10" data-type="bad"></li>
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite"
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/scrooge.png' %}" class="sprite"
                    alt="Media queries" data-collision="energy:-10"
                    data-type="bad"></li>
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite" alt="File API"
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/grinch.png' %}" class="sprite" alt="File API"
                    data-collision="energy:-10" data-type="bad"></li>
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite" alt="SVG"
+          <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/snow-ball.png' %}" class="sprite" alt="SVG"
                    data-collision="energy:-10" data-type="bad"></li>
-          <li><img src="{% static 'portfolio/WCGameImages/rock.png' %}" class="sprite"
+          <li><img src="{% static 'portfolio/WCGameImages/Christmas/snow-ball.png' %}" class="sprite"
                    alt="Geolocation" data-collision="energy:-10"
-                   data-type="bad"></li>
+                   data-type="bad"></li> -->
         </ul>
         <p><button class="endinstructions">Back to menu</button></p>
       </li>
@@ -118,6 +160,7 @@
   <section id="playfield">
     <div id="scoresinfo">
     <div id="energy">Energy <output>100</output></div>
+    <!-- <div id="energy">Energy <output>100</output></div> -->
     <div id="score">Score <output></output></div>
     </div>
     <canvas></canvas>
@@ -138,6 +181,9 @@
 <footer>
 </footer>
     {% load static %}
+<!-- <script>
+  var backroundMusic.src = "{% static 'portfolio/WCGameMusic/christmas-background-music.mp3' %}"
+</script> -->
 <script src="{% static 'portfolio/WCGame.js' %}"></script>
 </body>
 </html>

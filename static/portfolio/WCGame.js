@@ -17,6 +17,13 @@
       c             = canvas.getContext( '2d' ),
       startenergy   = +energydisplay.innerHTML;
 
+
+/* background music variables. Will work on these later */
+  var mySound;
+  var myMusic;
+
+
+
   /* Game data */
   var scores = {
         energy: startenergy
@@ -210,6 +217,35 @@
     }
   }
 
+
+  /*
+    Game Background music test code
+  */
+  // function startgame() {
+  //
+  //   myMusic = new sound(backroundMusic.src);
+  //   myMusic.play();
+  //
+  //   setcurrent( field );
+  //   gamestate = 'playing';
+  //   document.body.className = 'playing';
+  //   width = field.offsetWidth;
+  //   height = field.offsetHeight;
+  //   canvas.width = width;
+  //   canvas.height = height;
+  //   playerY = height - player.offsetHeight;
+  //   offset = player.offsetWidth / 2;
+  //   x = width / 2;
+  //   sprites = [];
+  //   for ( i = 0; i < initsprites; i++ ) {
+  //     sprites.push( addsprite() );
+  //   }
+  //   scores.energy = startenergy;
+  //   levelincrease = 0;
+  //   score = 0;
+  //   energydisplay.innerHTML = startenergy;
+  //   loop();
+  // }
   /*
     Start the game
   */

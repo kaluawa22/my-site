@@ -1,16 +1,3 @@
-
-//
-// $("#container").click(function(e) {
-//     var divWidth = $("#container").width();
-//     var clickX = e.clientX;
-//     if (clickX > divWidth/2) {
-//       console.log("Div was clicked on the right");
-//     } else {
-//       console.log("Div was clicked on the left");
-//     }
-// });
-
-
 (function(){
 
   /* DOM elements */
@@ -29,6 +16,13 @@
       characters    = document.querySelectorAll( 'li.introdeck' ),
       c             = canvas.getContext( '2d' ),
       startenergy   = +energydisplay.innerHTML;
+
+
+/* background music variables. Will work on these later */
+  var mySound;
+  var myMusic;
+
+
 
   /* Game data */
   var scores = {
@@ -112,24 +106,6 @@
     }
 
   };
-  // New touch controls
-  // function onplayermove ( ev ) {
-  //   var mx = ev.clientX - container.offsetLeft;
-  //   if ( mx < offset ) { mx = offset; }
-  //   if ( mx > width-offset ) { mx = width-offset; }
-  //   x = mx;
-  // }
-
-  function handleTouchEvent(e) {
-    if (e.touches.length === 0 ) return;
-    e.preventDefault();
-    e.stopPropagation();
-    var touch = e.touches[0];
-    var mx = (touch.clientX - container.offsetLeft);
-    if ( mx < offset ) { mx = offset; }
-    if ( mx > width-offset ) { mx = width-offset; }
-    x = mx;
-}
 
   /* Event Handlers */
 
@@ -175,6 +151,24 @@
     if ( x < offset ) { x = offset; }
     if ( x > width-offset ) { x = width-offset; }
   }
+
+  // function onplayermove ( ev ) {
+  //   var mx = ev.clientX - container.offsetLeft;
+  //   if ( mx < offset ) { mx = offset; }
+  //   if ( mx > width-offset ) { mx = width-offset; }
+  //   x = mx;
+  // }
+
+  function handleTouchEvent(e) {
+    if (e.touches.length === 0 ) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var touch = e.touches[0];
+    var mx = (touch.clientX - container.offsetLeft);
+    if ( mx < offset ) { mx = offset; }
+    if ( mx > width-offset ) { mx = width-offset; }
+    x = mx;
+}
 
   /* Mouse handling */
   // function onmousemove ( ev ) {
@@ -223,6 +217,35 @@
     }
   }
 
+
+  /*
+    Game Background music test code
+  */
+  // function startgame() {
+  //
+  //   myMusic = new sound(backroundMusic.src);
+  //   myMusic.play();
+  //
+  //   setcurrent( field );
+  //   gamestate = 'playing';
+  //   document.body.className = 'playing';
+  //   width = field.offsetWidth;
+  //   height = field.offsetHeight;
+  //   canvas.width = width;
+  //   canvas.height = height;
+  //   playerY = height - player.offsetHeight;
+  //   offset = player.offsetWidth / 2;
+  //   x = width / 2;
+  //   sprites = [];
+  //   for ( i = 0; i < initsprites; i++ ) {
+  //     sprites.push( addsprite() );
+  //   }
+  //   scores.energy = startenergy;
+  //   levelincrease = 0;
+  //   score = 0;
+  //   energydisplay.innerHTML = startenergy;
+  //   loop();
+  // }
   /*
     Start the game
   */
@@ -232,7 +255,6 @@
     document.body.className = 'playing';
     width = field.offsetWidth;
     height = field.offsetHeight;
-    width = 32
     canvas.width = width;
     canvas.height = height;
     playerY = height - player.offsetHeight;

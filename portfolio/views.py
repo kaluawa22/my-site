@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import ContactForm
 
 # Create your views here.
 
@@ -8,8 +8,9 @@ from django.shortcuts import render
 #     return render(request, 'portfolio/index.html', context)
 
 def index(request):
-    context = {'classhome': "nav-current"}
-    return render(request, 'portfolio/index2021.html', context)
+    # context = {'classhome': "nav-current"}
+    form = ContactForm()
+    return render(request, 'portfolio/index2021.html', {'form': form})
 
 def resume(request):
     context = {'classhome': "nav-current"}
