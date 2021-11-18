@@ -391,11 +391,11 @@
       this.px += this.vx;
       this.py += this.vy;
       if ( ~~(this.py + 10) > playerY ) {
-        if (~~(this.py + 10) === topField){
-          if (this.type === "sheep"){
-            sheep.push(this.type);
-          }
-        }
+        // if (~~(this.py + 10) === topField){
+        //   if (this.type === "sheep"){
+        //     sheep.push(this.type);
+        //   }
+        // }
         if ( (x - offset) < this.px && this.px < (x + offset) ) {
           if (this.type === "good"){
             goodMobs.push(this.type);
@@ -416,7 +416,7 @@
         if ( this.type === 'good' ) {
           i = this.effects.length;
           while ( i-- ) {
-            scores[ this.effects[ i ].effect ] -= + (this.effects[ i ].value);
+            scores[ this.effects[ i ].effect ] -= + ((this.effects[ i ].value) * 2);
             // goodMobs.push(scores[ this.effects[ i ].effect ]);
             // console.log(scores[ this.effects[ i ].effect ]);
           }
