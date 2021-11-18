@@ -416,7 +416,7 @@
         if ( this.type === 'good' ) {
           i = this.effects.length;
           while ( i-- ) {
-            scores[ this.effects[ i ].effect ] -= + ((this.effects[ i ].value) + 5);
+            scores[ this.effects[ i ].effect ] -= + (this.effects[ i ].value);
             // goodMobs.push(scores[ this.effects[ i ].effect ]);
             // console.log(scores[ this.effects[ i ].effect ]);
           }
