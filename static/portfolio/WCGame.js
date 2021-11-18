@@ -17,12 +17,14 @@
       c             = canvas.getContext( '2d' ),
       startenergy   = +energydisplay.innerHTML;
 
+  var goodMobs = [];
+  var sheep = [];
 
 /* background music variables. Will work on these later */
   var mySound;
   var myMusic;
 
-
+  // var windowSize = "width=" + window.innerWidth + ",height=" + window.innerHeight + ",scrollbars=no";
 
   /* Game data */
   var scores = {
@@ -35,6 +37,10 @@
       spritecount = 0, now = 0, old = null, playerY = 0, offset = 0,
       width = 0, height = 0, levelincrease = 0, i=0 , storedscores = null,
       initsprites = 0, newsprite = 500, rightdown = false, leftdown = false;
+
+  var topField = 0;
+// testing sheep counter code
+
   /*
     Setting up the game
   */
@@ -114,6 +120,8 @@
     var t = ev.target;
     if ( gamestate === 'gameover' ) {
       if ( t.id === 'replay' ) { showintro(); }
+  // Christmas promotion
+      if (t.id === 'angel-tree') { angelTree();}
     }
     if ( t.className === 'next' ) { instructionsnext(); }
     if ( t.className === 'endinstructions' ) { instructionsdone(); }
@@ -181,6 +189,10 @@
   /*
     Introduction
   */
+
+  function angelTree(){
+    window.open('https://www.wc.org/angel-tree-2021/', 'popup', '_self');
+  }
   function showintro() {
     setcurrent( intro );
     gamestate = 'intro';
@@ -258,6 +270,7 @@
     canvas.width = width;
     canvas.height = height;
     playerY = height - player.offsetHeight;
+    topField = height - scoredisplay.offsetHeight;
     offset = player.offsetWidth / 2;
     x = width / 2;
     sprites = [];
@@ -287,7 +300,11 @@
     /* show scores */
     energydisplay.innerHTML = scores.energy;
     scoredisplay.innerHTML = ~~(score/10);
+    // console.log(goodMobs.length);
+    console.log(sheep.length);
     score++;
+
+
 
     /* with increasing score, add more sprites */
     if ( ~~(score/newsprite) > levelincrease ) {
@@ -309,6 +326,7 @@
     if ( scores.energy > 0 ) {
       requestAnimationFrame( loop );
     } else {
+
       gameover();
     }
   };
@@ -329,17 +347,28 @@
     Game over
   */
   function gameover() {
+    var numOfGoodMobs = goodMobs.length;
+    var numOfSheep = sheep.length;
     document.body.className = 'gameover';
     setcurrent( over );
     gamestate = 'gameover';
-    var nowscore =  ~~(score/10);
+    var nowscore =  ~~(score/10) + (numOfGoodMobs * 50);
+    over.querySelector(  'output2').innerHTML = numOfGoodMobs;
     over.querySelector( 'output' ).innerHTML = nowscore;
+
     storedscores.last = nowscore;
     if ( nowscore > storedscores.high ) {
       overmsg.innerHTML = overmsg.getAttribute('data-highscore');
       storedscores.high = nowscore;
     }
+
+
     localStorage.html5catcher = JSON.stringify(storedscores);
+    console.log('this is the number of mobs ' + numOfGoodMobs);
+    console.log('This is the number of sheep ' + numOfSheep);
+    goodMobs = [];
+    sheep = [];
+    numOfGoodMobs = 0;
   }
 
   /*
@@ -348,6 +377,7 @@
 
   /* Particle system */
   function sprite() {
+    // goodMobs = [];
     this.px = 0;
     this.py = 0;
     this.vx = 0;
@@ -361,11 +391,21 @@
       this.px += this.vx;
       this.py += this.vy;
       if ( ~~(this.py + 10) > playerY ) {
+        if (~~(this.py + 10) === topField){
+          if (this.type === "sheep"){
+            sheep.push(this.type);
+          }
+        }
         if ( (x - offset) < this.px && this.px < (x + offset) ) {
+          if (this.type === "good"){
+            goodMobs.push(this.type);
+          }
           this.py = -200;
           i = this.effects.length;
           while ( i-- ) {
             scores[ this.effects[ i ].effect ] += +this.effects[ i ].value;
+
+
           }
         }
       }
@@ -376,7 +416,9 @@
         if ( this.type === 'good' ) {
           i = this.effects.length;
           while ( i-- ) {
-            scores[ this.effects[ i ].effect ] -= +this.effects[ i ].value;
+            scores[ this.effects[ i ].effect ] -= + ((this.effects[ i ].value) + 5);
+            // goodMobs.push(scores[ this.effects[ i ].effect ]);
+            // console.log(scores[ this.effects[ i ].effect ]);
           }
         }
         setspritedata( this );

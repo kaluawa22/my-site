@@ -33,11 +33,13 @@ h2 {font-size: 24px; margin-bottom: 10px;}
   display: block;
 }
 #gameover h1{
-  background: url(../img/brokenshield.png) no-repeat center 20px;
-  padding-top: 150px;
+  background: url(../WCGameCSS/christmas-tree.png) no-repeat center 20px;
+  padding-top: 100px;
   text-align: center;
   text-transform: uppercase;
 }
+
+
 #intro ul, #intro p, #gameover p {
   width: 80%;
   margin: 10px auto;
