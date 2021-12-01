@@ -1,4 +1,4 @@
-christmasAtWc(function(){
+(function(){
 
   /* DOM elements */
   var container     = $( '#container' ),
