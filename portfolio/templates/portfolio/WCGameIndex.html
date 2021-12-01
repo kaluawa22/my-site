@@ -42,18 +42,50 @@
       <li class="introdeck">
         <br>
         <br>
-        <br>
-        <br>
+
         <h2>Baby Jesus</h2>
         {% load static %}
+        <p>Baby Jesus Just Woke Up From A Nap...</p>
+        <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/baby-jesus.png' %}" width="72" height="100" id="player"
              data-increase="5">
-        <p>Your job is to help Baby Jesus pick up as many Christmas goodies as you can before He wakes up!</p>
-        <p>You can use the cursor keys, move the mouse on the playfield, or drag your finger using your device's touchscreen.</p>
+        <br>
+        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
+                data-collision="energy:10" data-type="good">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/candy-cane-2.png' %}" class="sprite"
+                 alt="Video" data-collision="energy:10"
+                 data-type="good">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-stocking.png' %}" class="sprite"
+                  alt="Video" data-collision="energy:10"
+                  data-type="good">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-tree.png' %}" class="sprite"
+                  alt="Video" data-collision="energy:10"
+                  data-type="good">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/santa-claus.png' %}" class="sprite"
+                  alt="Video" data-collision="energy:10"
+                  data-type="good">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/3-wise-men.png' %}" class="sprite"
+                 alt="Video" data-collision="energy:10"
+                 data-type="good">
+        <br>
+        <p>Help Baby Jesus catch as many Christmas goodies as you can before he gets too tired and needs another nap.</p>
+        <br>
+        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep.png' %}" class="sprite" alt="Flash"
+                 data-collision="energy:-60" data-type="sheep">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep-2.png' %}" class="sprite" alt="Flash"
+                data-collision="energy:-60" data-type="sheep">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep-3.png' %}" class="sprite" alt="Flash"
+                 data-collision="energy:-60" data-type="sheep">
+        <p>Avoid the Sheep so he does not count too many and fall asleep</p>
+        <br>
+        <p>Use the cursor keys, move the mouse, or drag your finger to move Baby Jesus on the screen.</p>
+        <!-- <br>
+        <p>You can use the cursor keys, move the mouse on the playfield, or drag your finger using your device's touchscreen.</p> -->
         <!-- <p>You can use the cursor keys or move the mouse on the playfield <span id="orientation">- or simply tilt your mobile or tablet</span>.</p> -->
         <!-- <p>The game is over when you are out of energy</p> -->
         <br>
-        <p><button class="next">More</button></p>
+        <!-- <p><button class="next">More</button></p> -->
+        <p><button class="endinstructions">Back to menu</button></p>
       </li>
 
       <li class="introdeck">
