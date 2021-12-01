@@ -9,13 +9,15 @@ body {
 h1 {font-size: 30px;}
 h2 {font-size: 24px; margin-bottom: 10px;}
 #container {
-  background: #165B33;
-  background: -moz-linear-gradient(top,  #165B33 0%, #146B3A 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##165B33), color-stop(100%,#146B3A));
-  background: -webkit-linear-gradient(top,  #165B33 0%,#146B3A 100%);
-  background: -o-linear-gradient(top,  #165B33 0%,#146B3A 100%);
-  background: -ms-linear-gradient(top,  #165B33 0%,#146B3A 100%);
-  background: linear-gradient(top,  #165B33 0%,#146B3A 100%);
+
+  background: #9E0913;
+  background: url(../WCGameCSS/snow-background.png);
+  /* background: -moz-linear-gradient(top,  #9d0913 0%, #146B3A 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##9d0913), color-stop(100%,#146B3A));
+  background: -webkit-linear-gradient(top,  #9d0913 0%,#146B3A 100%);
+  background: -o-linear-gradient(top,  #9d0913 0%,#146B3A 100%);
+  background: -ms-linear-gradient(top,  #9d0913 0%,#146B3A 100%);
+  background: linear-gradient(top,  #9d0913 0%,#146B3A 100%); */
 
 
   /* background: -moz-linear-gradient(top,  #a7cfdf 0%, #23538a 100%);
@@ -34,7 +36,7 @@ h2 {font-size: 24px; margin-bottom: 10px;}
 }
 #gameover h1{
   background: url(../WCGameCSS/christmas-tree.png) no-repeat center 20px;
-  padding-top: 100px;
+  padding-top: 60px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -62,15 +64,15 @@ h2 {font-size: 24px; margin-bottom: 10px;}
   font-size: 20px;
   line-height: 30px;
   border: none;
-  #BB2528
 
-  background: #BB2528;
-  background: -moz-linear-gradient(top,  #BB2528 0%, #EA4630 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##BB2528), color-stop(100%,#EA4630));
-  background: -webkit-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: -o-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: -ms-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: linear-gradient(top,  #BB2528 0%,#EA4630 100%);
+
+  background: #9d0913;
+  background: -moz-linear-gradient(top,  #9d0913 0%, #EA4630 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##9d0913), color-stop(100%,#EA4630));
+  background: -webkit-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: -o-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: -ms-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: linear-gradient(top,  #9d0913 0%,#EA4630 100%);
   /* box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
   border-radius: 5px; */
 
@@ -91,13 +93,13 @@ h2 {font-size: 24px; margin-bottom: 10px;}
   border-radius: 5px;
   font-size: 25px;
 
-  background: #BB2528;
-  background: -moz-linear-gradient(top,  #BB2528 0%, #EA4630 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##BB2528), color-stop(100%,#EA4630));
-  background: -webkit-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: -o-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: -ms-linear-gradient(top,  #BB2528 0%,#EA4630 100%);
-  background: linear-gradient(top,  #BB2528 0%,#EA4630 100%);
+  background: #9d0913;
+  background: -moz-linear-gradient(top,  #9d0913 0%, #EA4630 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##9d0913), color-stop(100%,#EA4630));
+  background: -webkit-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: -o-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: -ms-linear-gradient(top,  #9d0913 0%,#EA4630 100%);
+  background: linear-gradient(top,  #9d0913 0%,#EA4630 100%);
 
 
 

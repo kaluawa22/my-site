@@ -19,14 +19,14 @@
 
     <section id ="intro">
       <div class ="logo">
-        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-logo.png' %}" width="100%" height ="261" id="logo">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-eve-at-wc-og.png' %}" width="100%" height ="130" id="logo">
      </div>
       <!-- <h1><span>Woodlands</span>Game</h1> -->
       <!-- <p> A game all about picking up as many people as you can</p> -->
       <br>
       <br>
 
-      <p>MERRY CHRISTMAS!</p>
+      <p>The Christmas season is here! Try out this game and enjoy some Christmas cheer.</p>
 
       <ul>
         <li>Last Score: <output></output></li>
@@ -43,11 +43,11 @@
         <br>
         <br>
 
-        <h2>Baby Jesus</h2>
+        <h2>Merry Christmas!</h2>
         {% load static %}
-        <p>Baby Jesus Just Woke Up From A Nap...</p>
+        <p>'Twas the night before Christmas...</p>
         <br>
-        <img src="{% static 'portfolio/WCGameImages/Christmas/baby-jesus.png' %}" width="72" height="100" id="player"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag.png' %}" width="72" height="100" id="player"
              data-increase="5">
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
@@ -68,15 +68,16 @@
                  alt="Video" data-collision="energy:10"
                  data-type="good">
         <br>
-        <p>Help Baby Jesus catch as many Christmas goodies as you can before he gets too tired and needs another nap.</p>
+        <p>Your Job is to catch as many Christmas Goodies as you can before you lose all your energy!</p>
+        <p>Catching these items increases your score and regenerates your energy</p>
         <br>
-        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep.png' %}" class="sprite" alt="Flash"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="sheep">
-        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep-2.png' %}" class="sprite" alt="Flash"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-2.png' %}" class="sprite" alt="Flash"
                 data-collision="energy:-60" data-type="sheep">
-        <img src="{% static 'portfolio/WCGameImages/Christmas/sheep-3.png' %}" class="sprite" alt="Flash"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-3.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="sheep">
-        <p>Avoid the Sheep so he does not count too many and fall asleep</p>
+        <p>Avoid catching the Coal at all cost! Catching one of these will cost you alot of energy!</p>
         <br>
         <p>Use the cursor keys, move the mouse, or drag your finger to move Baby Jesus on the screen.</p>
         <!-- <br>
@@ -178,12 +179,12 @@
           {% load static %}
           <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/sheep.png' %}" class="sprite" alt="Flash"
                    data-collision="energy:-50" data-type="bad"></li> -->
-         <li><img src="{% static 'portfolio/WCGameImages/Christmas/sheep.png' %}" class="sprite" alt="Flash"
-                  data-collision="energy:-60" data-type="sheep"></li>
-        <li><img src="{% static 'portfolio/WCGameImages/Christmas/sheep-2.png' %}" class="sprite" alt="Flash"
-                 data-collision="energy:-60" data-type="sheep"></li>
-         <li><img src="{% static 'portfolio/WCGameImages/Christmas/sheep-3.png' %}" class="sprite" alt="Flash"
-                  data-collision="energy:-60" data-type="sheep"></li>
+         <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
+                  data-collision="energy:-60" data-type="bad"></li>
+        <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-2.png' %}" class="sprite" alt="Flash"
+                 data-collision="energy:-60" data-type="bad"></li>
+         <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-3.png' %}" class="sprite" alt="Flash"
+                  data-collision="energy:-60" data-type="bad"></li>
         <!-- <li><img src="images/rock.png" class="sprite" alt="jQuery"
                   data-collision="energy:-50" data-type="bad"></li>
           <li><img src="images/rock.png" class="sprite" alt="CSS"
@@ -236,17 +237,23 @@
    <p>Items Caught: <output2></output2></p>
    <p>Your score: <output></output></p>
    <p class="message" data-highscore="New highscore!"></p>
+   <p><button id="submit-score">Submit Your Highscore</button></p>
    <p><button id="replay">Play again</button></p>
-   <br>
+
    <center>
-     <img src="{% static 'portfolio/WCGameImages/Christmas/angel-tree.png' %}">
+     <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-eve-at-wc-og.png' %}" width="100%" height ="100">
      <p class = "angel-tree">
-       Angel Tree exists to bring the joy of Christmas to local children
-       and seniors in our community! Join us in serving our community by sponsoring
-       an angel or registering to volunteer at Angel Tree this Christmas!
+       Experience the joy of the season with your family at
+       The Festival of Lights at Woodlands Church!
+     </p>
+     <p><button id="festival-of-lights">Festival Of Lights</button></p>
+     <p class = "angel-tree">
+       You’re invited to celebrate the birth of Christ at Christmas Eve at Woodlands Church!
+
      </p>
      <!-- <a class = "btn button" role="button" href = "https://www.wc.org/angel-tree-2021/" target="_blank">Angel-Tree</a> -->
-     <p><button id="angel-tree">Check Out Angel Tree!</button></p>
+     <p><button id="christmas-at-wc">Christmas At Woodlands Church</button></p>
+
    </center>
  </section>
 

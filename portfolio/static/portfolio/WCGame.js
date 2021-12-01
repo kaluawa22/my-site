@@ -1,4 +1,4 @@
-(function(){
+christmasAtWc(function(){
 
   /* DOM elements */
   var container     = $( '#container' ),
@@ -121,7 +121,10 @@
     if ( gamestate === 'gameover' ) {
       if ( t.id === 'replay' ) { showintro(); }
   // Christmas promotion
-      if (t.id === 'angel-tree') { angelTree();}
+      if (t.id === 'christmas-at-wc') { christmasAtWc();}
+
+// Festival of Lights promotion
+      if (t.id === 'festival-of-lights') { festivalOfLights();}
     }
     if ( t.className === 'next' ) { instructionsnext(); }
     if ( t.className === 'endinstructions' ) { instructionsdone(); }
@@ -190,9 +193,14 @@
     Introduction
   */
 
-  function angelTree(){
-    window.open('https://www.wc.org/angel-tree-2021/', 'popup', '_self');
+  function christmasAtWc(){
+    window.open('https://www.woodlandschristmas.org', 'popup', '_self');
   }
+
+  function festivalOfLights(){
+    window.open('https://www.woodlandschristmas.org/festival', 'popup', '_self');
+  }
+
   function showintro() {
     setcurrent( intro );
     gamestate = 'intro';
