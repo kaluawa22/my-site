@@ -18,7 +18,7 @@ h2 {
 #container {
 
   background: #9E0913;
-  background: url(../WCGameCSS/snow-background-resize.png);
+  background: url(../WCGameCSS/snow-bg-resize-light.png);
   /* background: -moz-linear-gradient(top,  #9d0913 0%, #146B3A 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,##9d0913), color-stop(100%,#146B3A));
   background: -webkit-linear-gradient(top,  #9d0913 0%,#146B3A 100%);
