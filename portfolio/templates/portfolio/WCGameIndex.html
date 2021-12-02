@@ -29,8 +29,8 @@
       <p>The Christmas season is here! Try out this game and enjoy some Christmas cheer.</p>
 
       <ul>
-        <li>Last Score: <output></output></li>
-        <li>High Score: <output></output></li>
+        <li class = "last-score">Last Score: <output></output></li>
+        <li class = "high-score">High Score: <output></output></li>
         <li><button id="instructionbutton">Instructions</button></li>
         <li><button id="playbutton">Play</button></li>
       </ul>
@@ -45,7 +45,7 @@
 
         <h2>Merry Christmas!</h2>
         {% load static %}
-        <p>'Twas the night before Christmas...</p>
+        <p class ="intro-text">'Twas the night before Christmas...</p>
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag.png' %}" width="72" height="100" id="player"
              data-increase="5">
@@ -68,8 +68,8 @@
                  alt="Video" data-collision="energy:10"
                  data-type="good">
         <br>
-        <p>Your Job is to catch as many Christmas Goodies as you can before you lose all your energy!</p>
-        <p>Catching these items increases your score and regenerates your energy</p>
+        <p class ="intro-text">Your Job is to catch as many Christmas Goodies as you can before you lose all your energy!</p>
+        <p class ="intro-text">Catching these items increases your score and regenerates your energy</p>
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="sheep">
@@ -77,9 +77,9 @@
                 data-collision="energy:-60" data-type="sheep">
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-3.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="sheep">
-        <p>Avoid catching the Coal at all cost! Catching one of these will cost you alot of energy!</p>
+        <p class ="intro-text">Avoid catching the Coal at all cost! Catching one of these will cost you alot of energy!</p>
         <br>
-        <p>Use the cursor keys, move the mouse, or drag your finger to move Baby Jesus on the screen.</p>
+        <p class ="intro-text">Use the cursor keys, move the mouse, or drag your finger to move Baby Jesus on the screen.</p>
         <!-- <br>
         <p>You can use the cursor keys, move the mouse on the playfield, or drag your finger using your device's touchscreen.</p> -->
         <!-- <p>You can use the cursor keys or move the mouse on the playfield <span id="orientation">- or simply tilt your mobile or tablet</span>.</p> -->
@@ -234,20 +234,20 @@
 
   <section id="gameover">
    <header><h1>Game over</h1></header>
-   <p>Items Caught: <output2></output2></p>
-   <p>Your score: <output></output></p>
+   <p class = "items-caught">Items Caught: <output2></output2></p>
+   <p class = "your-score">Your score: <output></output></p>
    <p class="message" data-highscore="New highscore!"></p>
    <p><button id="submit-score">Submit Your Highscore</button></p>
    <p><button id="replay">Play again</button></p>
 
    <center>
      <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-eve-at-wc-og.png' %}" width="100%" height ="100">
-     <p class = "angel-tree">
+     <p class = "lights-promo">
        Experience the joy of the season with your family at
        The Festival of Lights at Woodlands Church!
      </p>
      <p><button id="festival-of-lights">Festival Of Lights</button></p>
-     <p class = "angel-tree">
+     <p class = "christmas-promo">
        You’re invited to celebrate the birth of Christ at Christmas Eve at Woodlands Church!
 
      </p>
