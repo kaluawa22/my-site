@@ -70,6 +70,7 @@
         <br>
         <p class ="intro-text">Your Job is to catch as many Christmas Goodies as you can before you lose all your energy!</p>
         <p class ="intro-text">Catching these items increases your score and regenerates your energy</p>
+        <p class ="intro-text">Likewise, failure to catch these items will cost you some energy so do your best!</p>
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="sheep">
@@ -79,14 +80,14 @@
                  data-collision="energy:-60" data-type="sheep">
         <p class ="intro-text">Avoid catching the Coal at all cost! Catching one of these will cost you alot of energy!</p>
         <br>
-        <p class ="intro-text">Use the cursor keys, move the mouse, or drag your finger to move Baby Jesus on the screen.</p>
+        <p class ="intro-text">Use the cursor keys, move the mouse, or drag your finger to move your player across the screen.</p>
         <!-- <br>
         <p>You can use the cursor keys, move the mouse on the playfield, or drag your finger using your device's touchscreen.</p> -->
         <!-- <p>You can use the cursor keys or move the mouse on the playfield <span id="orientation">- or simply tilt your mobile or tablet</span>.</p> -->
         <!-- <p>The game is over when you are out of energy</p> -->
         <br>
         <!-- <p><button class="next">More</button></p> -->
-        <p><button class="endinstructions">Back to menu</button></p>
+        <p><button class="endinstructions">Back To Menu</button></p>
       </li>
 
       <li class="introdeck">
@@ -217,7 +218,7 @@
                    data-type="bad"></li> -->
         </ul>
         <br>
-        <p><button class="endinstructions">Back to menu</button></p>
+        <p><button class="endinstructions">Back To Menu</button></p>
       </li>
     </ul>
   </section>
@@ -235,10 +236,10 @@
   <section id="gameover">
    <header><h1>Game over</h1></header>
    <p class = "items-caught">Items Caught: <output2></output2></p>
-   <p class = "your-score">Your score: <output></output></p>
+   <p class = "your-score">Your Score: <output></output></p>
    <p class="message" data-highscore="New highscore!"></p>
    <p><button id="submit-score">Submit Your Highscore</button></p>
-   <p><button id="replay">Play again</button></p>
+   <p><button id="replay">Play Again</button></p>
 
    <center>
      <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-eve-at-wc-og.png' %}" width="100%" height ="100">
