@@ -17,9 +17,10 @@
       c             = canvas.getContext( '2d' ),
       startenergy   = +energydisplay.innerHTML;
 
+
   var goodMobs = [];
   var sheep = [];
-
+  var scoretosubmit = 0;
 /* background music variables. Will work on these later */
   var mySound;
   var myMusic;
@@ -44,6 +45,7 @@
   /*
     Setting up the game
   */
+  
 
   function init() {
     var current, sprdata, scoreinfo, i, j;
@@ -123,8 +125,10 @@
   // Christmas promotion
       if (t.id === 'christmas-at-wc') { christmasAtWc();}
 
-// Festival of Lights promotion
+  // Festival of Lights promotion
       if (t.id === 'festival-of-lights') { festivalOfLights();}
+  // Submit Your Highscore
+      if (t.id === 'submit-score') { submitScore();}
     }
     if ( t.className === 'next' ) { instructionsnext(); }
     if ( t.className === 'endinstructions' ) { instructionsdone(); }
@@ -199,6 +203,11 @@
 
   function festivalOfLights(){
     window.open('https://www.woodlandschristmas.org/festival', 'popup', '_self');
+  }
+
+  function submitScore(){
+    var urlscore = ("https://rms.wc.org/page/1298?Score=" + scoretosubmit);
+    window.open(urlscore, 'popup', '_self');
   }
 
   function showintro() {
@@ -361,6 +370,7 @@
     setcurrent( over );
     gamestate = 'gameover';
     var nowscore =  ~~(score/10) + (numOfGoodMobs * 50);
+    scoretosubmit = ~~(score/10) + (numOfGoodMobs * 50);
     over.querySelector(  'output2').innerHTML = numOfGoodMobs;
     over.querySelector( 'output' ).innerHTML = nowscore;
 
