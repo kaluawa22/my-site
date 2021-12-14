@@ -48,24 +48,24 @@
         <p class ="intro-text">'Twas the night before Christmas...</p>
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag.png' %}" width="72" height="100" id="player"
-             data-increase="5">
+             data-increase="10">
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
-                data-collision="energy:10" data-type="good">
+                data-collision="energy:0" data-type="good">
         <img src="{% static 'portfolio/WCGameImages/Christmas/candy-cane-2.png' %}" class="sprite"
-                 alt="Video" data-collision="energy:10"
+                 alt="Video" data-collision="energy:0"
                  data-type="good">
         <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-stocking.png' %}" class="sprite"
-                  alt="Video" data-collision="energy:10"
+                  alt="Video" data-collision="energy:0"
                   data-type="good">
         <img src="{% static 'portfolio/WCGameImages/Christmas/christmas-tree.png' %}" class="sprite"
-                  alt="Video" data-collision="energy:10"
+                  alt="Video" data-collision="energy:0"
                   data-type="good">
-        <img src="{% static 'portfolio/WCGameImages/Christmas/santa-claus.png' %}" class="sprite"
-                  alt="Video" data-collision="energy:10"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/gingerbread-man.png' %}" class="sprite"
+                  alt="Video" data-collision="energy:0"
                   data-type="good">
-        <img src="{% static 'portfolio/WCGameImages/Christmas/3-wise-men.png' %}" class="sprite"
-                 alt="Video" data-collision="energy:10"
+        <img src="{% static 'portfolio/WCGameImages/Christmas/nutcracker.png' %}" class="sprite"
+                 alt="Video" data-collision="energy:0"
                  data-type="good">
         <br>
         <p class ="intro-text">Your Job is to catch as many Christmas Goodies as you can before you lose all your energy!</p>
@@ -73,11 +73,17 @@
         <p class ="intro-text">Likewise, failure to catch these items will cost you some energy so do your best!</p>
         <br>
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
-                 data-collision="energy:-60" data-type="sheep">
+                 data-collision="energy:-25" data-type="sheep">
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-2.png' %}" class="sprite" alt="Flash"
-                data-collision="energy:-60" data-type="sheep">
+                data-collision="energy:-25" data-type="sheep">
         <img src="{% static 'portfolio/WCGameImages/Christmas/coal-3.png' %}" class="sprite" alt="Flash"
-                 data-collision="energy:-60" data-type="sheep">
+                 data-collision="energy:-25" data-type="sheep">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-4.png' %}" class="sprite" alt="Flash"
+                  data-collision="energy:-25" data-type="sheep">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-5.png' %}" class="sprite" alt="Flash"
+                 data-collision="energy:-25" data-type="sheep">
+        <img src="{% static 'portfolio/WCGameImages/Christmas/coal-6.png' %}" class="sprite" alt="Flash"
+                  data-collision="energy:-25" data-type="sheep">
         <p class ="intro-text">Avoid catching the Coal at all cost! Catching one of these will cost you alot of energy!</p>
         <br>
         <p class ="intro-text">Use the cursor keys, move the mouse, or drag your finger to move your player across the screen.</p>
@@ -99,8 +105,8 @@
         <p>Picking up Christmas Presents regenerates 10 Energy points.</p>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
-                   data-collision="energy:10" data-type="good"></li>
+          <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-presents.png' %}" class="sprite" alt="Video"
+                   data-collision="energy:10" data-type="good"></li> -->
           <!-- <li><img src="images/bible.png" class="sprite" alt="Audio"
                    data-collision="energy:20" data-type="good"></li> -->
           <!-- <li><img src="images/person.png" class="sprites" alt="Canvas"
@@ -113,7 +119,7 @@
         <br>
         <ul>
           {% load static %}
-          <li><img src="{% static 'portfolio/WCGameImages/Christmas/candy-cane-2.png' %}" class="sprite"
+          <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/candy-cane-2.png' %}" class="sprite"
                    alt="Video" data-collision="energy:10"
                    data-type="good"></li>
          <li><img src="{% static 'portfolio/WCGameImages/Christmas/christmas-stocking.png' %}" class="sprite"
@@ -128,7 +134,7 @@
 
           <li><img src="{% static 'portfolio/WCGameImages/Christmas/3-wise-men.png' %}" class="sprite"
                    alt="Video" data-collision="energy:10"
-                   data-type="good"></li>
+                   data-type="good"></li> -->
             <!--  <li><img src="{% static 'portfolio/WCGameImages/books/numbers.png' %}" class="sprite"
                      alt="Video" data-collision="energy:10"
                      data-type="good"></li>
@@ -180,12 +186,12 @@
           {% load static %}
           <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/sheep.png' %}" class="sprite" alt="Flash"
                    data-collision="energy:-50" data-type="bad"></li> -->
-         <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
+         <!-- <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-1.png' %}" class="sprite" alt="Flash"
                   data-collision="energy:-60" data-type="bad"></li>
         <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-2.png' %}" class="sprite" alt="Flash"
                  data-collision="energy:-60" data-type="bad"></li>
          <li><img src="{% static 'portfolio/WCGameImages/Christmas/coal-3.png' %}" class="sprite" alt="Flash"
-                  data-collision="energy:-60" data-type="bad"></li>
+                  data-collision="energy:-60" data-type="bad"></li> -->
         <!-- <li><img src="images/rock.png" class="sprite" alt="jQuery"
                   data-collision="energy:-50" data-type="bad"></li>
           <li><img src="images/rock.png" class="sprite" alt="CSS"
@@ -226,7 +232,14 @@
 
   <section id="playfield">
     <div id="scoresinfo">
-    <div id="energy">Energy <output>100</output></div>
+    <div id="energy">Lives <output>100</output>
+        <img id="lives-bag-1" src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag-life.png' %}" width="18" height ="30" style="float: right;display: block">
+        <img id="lives-bag-2" src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag-life.png' %}" width="18" height ="30" style="float: right;display: block">
+        <img id="lives-bag-3" src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag-life.png' %}" width="18" height ="30" style="float: right;display: block">
+        <img id="lives-bag-4" src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag-life.png' %}" width="18" height ="30" style="float: right;display: block">
+        <!-- <img id="lives-bag-3" src="{% static 'portfolio/WCGameImages/Christmas/treasure-bag-life.png' %}" width="18" height ="30" style="float: right;display: block"> -->
+
+    </div>
     <!-- <div id="energy">Energy <output>100</output></div> -->
     <div id="score">Score <output></output></div>
     </div>

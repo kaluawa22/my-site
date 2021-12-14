@@ -24,7 +24,6 @@
 /* background music variables. Will work on these later */
   var mySound;
   var myMusic;
-
   // var windowSize = "width=" + window.innerWidth + ",height=" + window.innerHeight + ",scrollbars=no";
 
   /* Game data */
@@ -45,7 +44,7 @@
   /*
     Setting up the game
   */
-  
+
 
   function init() {
     var current, sprdata, scoreinfo, i, j;
@@ -298,6 +297,7 @@
     levelincrease = 0;
     score = 0;
     energydisplay.innerHTML = startenergy;
+
     loop();
   }
 
@@ -316,6 +316,24 @@
 
     /* show scores */
     energydisplay.innerHTML = scores.energy;
+    if (scores.energy == 100){
+      document.getElementById("lives-bag-4").style.display = "block";
+      document.getElementById("lives-bag-3").style.display = "block";
+      document.getElementById("lives-bag-2").style.display = "block";
+    }
+    if (scores.energy < 100){
+      if (scores.energy == 75){
+        document.getElementById("lives-bag-4").style.display = "none";
+      }
+      if (scores.energy == 50){
+        document.getElementById("lives-bag-3").style.display = "none";
+      }
+      if (scores.energy == 25){
+        document.getElementById("lives-bag-2").style.display = "none";
+      }
+    }
+
+
     scoredisplay.innerHTML = ~~(score/10);
     // console.log(goodMobs.length);
     console.log(sheep.length);
@@ -387,11 +405,18 @@
     goodMobs = [];
     sheep = [];
     numOfGoodMobs = 0;
+
   }
 
   /*
     Helper methods
   */
+  function enlargeImg() {
+        // Set image size to 1.5 times original
+        img.style.transform = "scale(1.5)";
+        // Animation effect
+        img.style.transition = "transform 0.25s ease";
+      }
 
   /* Particle system */
   function sprite() {
@@ -421,7 +446,10 @@
           this.py = -200;
           i = this.effects.length;
           while ( i-- ) {
+            // changes energy based on collided sprite's energy attribute
             scores[ this.effects[ i ].effect ] += +this.effects[ i ].value;
+
+
 
 
           }
@@ -434,7 +462,8 @@
         if ( this.type === 'good' ) {
           i = this.effects.length;
           while ( i-- ) {
-            scores[ this.effects[ i ].effect ] -= + ((this.effects[ i ].value) * 2);
+            // player loses energy from not catching sprite equal to 2 times the sprites
+            // scores[ this.effects[ i ].effect ] -= + ((this.effects[ i ].value) * 2);
             // goodMobs.push(scores[ this.effects[ i ].effect ]);
             // console.log(scores[ this.effects[ i ].effect ]);
           }
@@ -471,7 +500,7 @@
     sprite.vy = rand( 1, 5 );
   };
 
-  /* yeah, yeah... */
+
   function $( str ) {
     return document.querySelector( str );
   };

@@ -114,9 +114,18 @@ canvas {
   padding-left: 20px;
   color: #DCBE9E;
 }
-#energy output, #score output {
+
+#energy output{
+  position: absolute;
+  right: -100px;
+  color: #DCBE9E;
+}
+#score output {
 
   position: absolute;
   right: 20px;
   color: #DCBE9E;
 }
+/* #lives-bag{
+  display: block;
+} */
