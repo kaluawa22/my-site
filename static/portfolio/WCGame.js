@@ -36,7 +36,7 @@
   var score = 0, gamestate = null, x = 0, sprites = [], allsprites = [],
       spritecount = 0, now = 0, old = null, playerY = 0, offset = 0,
       width = 0, height = 0, levelincrease = 0, i=0 , storedscores = null,
-      initsprites = 0, newsprite = 500, rightdown = false, leftdown = false;
+      initsprites = 0, newsprite = 1, rightdown = false, leftdown = false;
 
   var topField = 0;
 // testing sheep counter code
@@ -343,6 +343,7 @@
 
     /* with increasing score, add more sprites */
     if ( ~~(score/newsprite) > levelincrease ) {
+      sprites.push( addsprite() );
       sprites.push( addsprite() );
       levelincrease++;
     }
