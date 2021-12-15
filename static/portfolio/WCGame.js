@@ -128,6 +128,8 @@
       if (t.id === 'festival-of-lights') { festivalOfLights();}
   // Submit Your Highscore
       if (t.id === 'submit-score') { submitScore();}
+// view score board
+      if (t.id === 'view-score') { viewScore();}
     }
     if ( t.className === 'next' ) { instructionsnext(); }
     if ( t.className === 'endinstructions' ) { instructionsdone(); }
@@ -207,6 +209,10 @@
   function submitScore(){
     var urlscore = ("https://rms.wc.org/page/1298?Score=" + scoretosubmit);
     window.open(urlscore, 'popup', '_self');
+  }
+
+  function viewScore(){
+    window.open('https://rms.wc.org/page/1299', 'popup', '_self');
   }
 
   function showintro() {
