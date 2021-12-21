@@ -119,6 +119,7 @@
   /* Click handling */
   function onclick( ev ) {
     var t = ev.target;
+    if (t.id === 'view-score') { viewScore();}
     if ( gamestate === 'gameover' ) {
       if ( t.id === 'replay' ) { showintro(); }
   // Christmas promotion
